@@ -70,7 +70,7 @@ app.put("/todos/:id", (req, res) => {
       writeTodos(todos)
       res.status(200).send("Updated")
     } else {
-      res.send(404).send("Not Found")
+      res.status(404).send("Not Found")
     }
   }
 })
